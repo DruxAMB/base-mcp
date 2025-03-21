@@ -1,0 +1,72 @@
+{
+  "name": "base-mcp",
+  "version": "1.0.4",
+  "description": "A Model Context Protocol (MCP) server that provides onchain tools for Claude AI, allowing it to interact with the Base blockchain and Coinbase API",
+  "bin": "./build/index.js",
+  "type": "module",
+  "scripts": {
+    "run": "ts-node src/index.ts",
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "lint": "eslint src",
+    "start": "node build/index.js",
+    "test": "node scripts/test-mcp.js",
+    "submit": "node scripts/submit-to-directory.js",
+    "format": "prettier --write .",
+    "ci:format": "prettier --check ."
+  },
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/base/base-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "base",
+    "blockchain",
+    "coinbase",
+    "ethereum",
+    "web3",
+    "ai"
+  ],
+  "author": "Dan Schlabach, Tina He",
+  "license": "MIT",
+  "packageManager": "yarn@4.5.1",
+  "dependencies": {
+    "@coinbase/agentkit": "^0.4.0",
+    "@coinbase/agentkit-model-context-protocol": "^0.2.0",
+    "@coinbase/coinbase-sdk": "^0.21.0",
+    "@coinbase/onchainkit": "^0.37.6",
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "dotenv": "^16.4.7",
+    "graphql": "^16.10.0",
+    "graphql-request": "^7.1.2",
+    "reflect-metadata": "^0.2.2",
+    "viem": "^2.23.9",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@types/node": "^22.13.9",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "zod-to-json-schema": "^3.24.4"
+  }
+}
